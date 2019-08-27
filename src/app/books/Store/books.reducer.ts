@@ -1,7 +1,7 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from "@ngrx/entity";
 import { Book } from "src/app/shared/models/book.model";
 import { BooksPageActions, BooksApiActions } from "src/app/books/actions";
-import { createSelector } from "@ngrx/store";
+import { createSelector, MetaReducer } from "@ngrx/store";
 
 export const initialBooks: Book[] = [
   {
@@ -27,6 +27,8 @@ export const initialBooks: Book[] = [
 export interface State extends EntityState<Book> {
   activeBookId: string | null;
 }
+
+export const bookmetaReducers: MetaReducer<State>[] = [];
 
 export const adapter = createEntityAdapter<Book>();
 

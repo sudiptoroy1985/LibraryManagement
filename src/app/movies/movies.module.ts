@@ -1,3 +1,4 @@
+import { metaReducers } from "./Store/movies.metareducer";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
@@ -20,7 +21,7 @@ import { reducer } from "./Store/movies.reducer";
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
-    StoreModule.forFeature("movies", reducer, {}),
+    StoreModule.forFeature("movies", reducer, { metaReducers}),
     RouterModule.forChild([{ path: "movies", component: MoviesPageComponent }]),
     EffectsModule.forFeature([MovieApiEffects])
   ],
