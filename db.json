@@ -11,6 +11,18 @@
       "name": "Inception",
       "description": "I forgot",
       "earnings": 50000000
+    },
+    {
+      "id": "da38c4e6-99a5-4696-b5b8-8a4c5d45aaf5",
+      "name": "Martian",
+      "earnings": "2350080",
+      "description": "space thriller"
+    },
+    {
+      "id": "f7627cf3-6975-4faa-87a0-a358767430ab",
+      "name": "Martian",
+      "earnings": "12000",
+      "description": "Matt Damon stuck in space"
     }
   ],
   "books": []

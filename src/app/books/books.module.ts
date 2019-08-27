@@ -12,12 +12,15 @@ import { BooksTotalComponent } from "./components/books-total/books-total.compon
 
 import { EffectsModule } from "@ngrx/effects";
 import { BooksApiEffects } from "./books-api.effects";
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './Store/books.reducer';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
+    StoreModule.forFeature('books',reducer, {  }),
     RouterModule.forChild([{ path: "books", component: BooksPageComponent }]),
     EffectsModule.forFeature([BooksApiEffects])
   ],

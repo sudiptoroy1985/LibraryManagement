@@ -12,12 +12,15 @@ import { MoviesPageComponent } from "./components/movies-page/movies-page.compon
 import { MovieDetailComponent } from "./components/movie-detail/movie-detail.component";
 import { MoviesListComponent } from "./components/movies-list/movies-list.component";
 import { MoviesTotalComponent } from "./components/movies-total/movies-total.component";
+import { StoreModule } from "@ngrx/store";
+import { reducer } from "./Store/movies.reducer";
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
+    StoreModule.forFeature("movies", reducer, {}),
     RouterModule.forChild([{ path: "movies", component: MoviesPageComponent }]),
     EffectsModule.forFeature([MovieApiEffects])
   ],

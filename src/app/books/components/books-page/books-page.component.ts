@@ -4,7 +4,7 @@ import { Book } from "src/app/shared/models/book.model";
 
 import { Observable } from "rxjs";
 import { Store, select } from "@ngrx/store";
-import * as fromRoot from "src/app/shared/state";
+import * as fromRoot from "src/app/books/Store/books.selector";
 import { BooksPageActions } from "../../actions";
 
 @Component({
@@ -17,7 +17,7 @@ export class BooksPageComponent implements OnInit {
   activeBook$: Observable<Book>;
   total$: Observable<number>;
 
-  constructor(private store: Store<fromRoot.State>) {
+  constructor(private store: Store<fromRoot.BookState>) {
     this.books$ = this.store.pipe(select(fromRoot.selectAllBooks));
     this.activeBook$ = this.store.pipe(select(fromRoot.selectActiveBook));
     this.total$ = this.store.pipe(select(fromRoot.selectBookEarningsTotals));

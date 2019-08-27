@@ -11,9 +11,9 @@ import { EffectsModule } from "@ngrx/effects";
 import { MaterialModule } from "./material.module";
 import { MoviesModule } from "./movies/movies.module";
 
-import { AppComponent } from "./app.component";
+ import { AppComponent } from "./app.component";
 
-import { reducers, metaReducers } from "./shared/state";
+ import { reducers, metaReducers } from "./shared/state";
 import { BooksModule } from "./books/books.module";
 
 @NgModule({
@@ -25,7 +25,7 @@ import { BooksModule } from "./books/books.module";
     RouterModule.forRoot([
       { path: "", pathMatch: "full", redirectTo: "/movies" }
     ]),
-    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreModule.forRoot( reducers, { metaReducers }),
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
     MaterialModule,

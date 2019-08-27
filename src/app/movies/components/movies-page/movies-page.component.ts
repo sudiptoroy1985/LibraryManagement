@@ -3,7 +3,7 @@ import { Store, select } from "@ngrx/store";
 
 import { MoviesPageActions } from "../../actions";
 import { Movie } from "src/app/shared/models/movie.model";
-import * as fromRoot from "src/app/shared/state";
+import * as fromRoot from "src/app/movies/Store/movies.selector";
 
 @Component({
   selector: "app-movies",
@@ -15,7 +15,7 @@ export class MoviesPageComponent implements OnInit {
   activeMovie$ = this.store.pipe(select(fromRoot.selectActiveMovie));
   total$ = this.store.pipe(select(fromRoot.selectMoviesEarningsTotal));
 
-  constructor(private store: Store<fromRoot.State>) {}
+  constructor(private store: Store<fromRoot.MovieState>) {}
 
   ngOnInit() {
     this.store.dispatch(MoviesPageActions.enter());
