@@ -1,12 +1,6 @@
 {
   "movies": [
     {
-      "id": "1",
-      "name": "Interstellar",
-      "description": "Space",
-      "earnings": 25000000
-    },
-    {
       "id": "2",
       "name": "Inception",
       "description": "I forgot",

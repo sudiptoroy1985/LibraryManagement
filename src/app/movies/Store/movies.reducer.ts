@@ -22,7 +22,7 @@ export function reducer(
 ): State {
   switch (action.type) {
     case MoviesPageActions.enter.type: {
-      return { ...state, activeMovieId: null };
+      return { ...state };
     }
 
     case MoviesPageActions.selectMovie.type: {
